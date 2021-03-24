@@ -1,0 +1,75 @@
+
+@font-face {
+    font-family: Google Sans;
+    font-display: swap;
+    src: url($GoogleSans-Regular) format('woff2');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Google Sans;
+    font-display: swap;
+    src: url($GoogleSans-Medium) format('woff2');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Google Sans;
+    font-display: swap;
+    src: url($GoogleSans-Bold) format('woff2');
+    font-weight: bold;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+    
+h1, h2 {
+    font-family: 'Google Sans', 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.category-list .category-text-title {
+    font-family: 'Google Sans', 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+table th, .table-heading, .suggested-topics-title {
+    font-family: 'Google Sans', 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.custom-footer {
+   background: var(--secondary-very-high) !important;
+}
+
+.custom-footer .heading::before {
+    background-image: url($logo-footer);
+    background-repeat: no-repeat;
+    display: inline-block;
+    content: "";
+    /*change the settings below based on the size of your logo*/
+    background-size: 180px 35px;
+    width: 200px;
+    height: 42px;
+}
+
+.custom-footer .flexbox {
+   color: var(--primary-high) !important;
+}
+
+.custom-footer .footer-section-link-wrapper a {
+   color: var(--primary-high) !important;
+}
+
+.custom-footer .third-box .small-link {
+   color: var(--primary-very-high) !important;
+}
+
+.custom-footer .third-box .social .social-link .d-icon {
+   color: var(--primary-very-high) !important;
+}
+
+.custom-footer .first-box .blurb {
+   color: var(--primary-high) !important;
+}

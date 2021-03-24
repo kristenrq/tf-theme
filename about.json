@@ -1,0 +1,33 @@
+{
+  "name": "TF Theme 2",
+  "component": false,
+  "license_url": null,
+  "about_url": null,
+  "authors": null,
+  "theme_version": null,
+  "minimum_discourse_version": null,
+  "maximum_discourse_version": null,
+  "assets": {
+    "logo-footer": "assets/logo-footer.png",
+    "GoogleSans-Medium": "assets/GoogleSans-Medium.woff2",
+    "GoogleSans-Regular": "assets/GoogleSans-Regular.woff2",
+    "GoogleSans-Bold": "assets/GoogleSans-Bold.woff2"
+  },
+  "color_schemes": {
+    "TF Light": {
+      "primary": "222222",
+      "secondary": "ffffff",
+      "tertiary": "1a73e8",
+      "quaternary": "FF6F00",
+      "header_background": "ffffff",
+      "header_primary": "425066",
+      "highlight": "ffe98b",
+      "danger": "ff2f00",
+      "success": "1c8336",
+      "love": "f4cccc"
+    }
+  },
+  "modifiers": {
+  },
+  "learn_more": "https://meta.discourse.org/t/beginners-guide-to-using-discourse-themes/91966"
+}
