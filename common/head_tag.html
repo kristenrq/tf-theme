@@ -1,1 +1,46 @@
-<meta></meta>
+<script type="text/discourse-plugin" version="0.8.18">
+
+const h = require("virtual-dom").h;
+
+api.createWidget("tf-banner-widget", {
+  tagName: "div.tf-banner",
+  html(attrs) {
+
+    const path = window.location.pathname;
+    
+    const headerContent = `<span class="hero-title">Welcome to the TensorFlow Forum</span>
+    <section class="hero-cta__section">
+    <a class="hero-cta forum-hero__cta-icon arrow-icon" href="/faq">Read the community guidelines <span>&nbsp;</span></a>
+    <a class="hero-cta forum-hero__cta-icon arrow-icon" href="/tags">Browse topics by tag <span>&nbsp;</span></a>
+    </section>`
+    ;
+
+    let urlMatch;
+    if(settings.hide_header_on.length) {
+      const allowedPaths = settings.hide_header_on.split("|");
+      urlMatch = allowedPaths.some((allowedPath) => {
+          if(allowedPath.slice(-1) === "*") {
+            return path.indexOf(allowedPath.slice(0, -1)) === 0;
+          }
+          return path === allowedPath;
+      });
+    }
+
+    if(path === "/" || !urlMatch) {
+      return [
+        h('div.hero-text', { innerHTML: headerContent }),
+      ]
+    }
+  }
+});
+
+api.decorateWidget('tf-banner-widget:after', helper => {
+  helper.widget.appEvents.on('page:changed', () => {
+    helper.widget.scheduleRerender();
+  });
+});
+</script>
+
+<script type="text/x-handlebars" data-template-name="/connectors/below-site-header/tfforum">
+    {{mount-widget widget="tf-banner-widget"}}
+</script>

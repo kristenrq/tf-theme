@@ -144,7 +144,11 @@ div.alert.alert-info {
 		z-index: -2;
 	}
 }
-section.hero-text {
+div.tf-banner {
+    width: var(--d-max-width);
+    margin: 20px auto;
+}
+div.hero-text {
 	margin: 30px 8px 48px;
 	max-width: 78%;
 }

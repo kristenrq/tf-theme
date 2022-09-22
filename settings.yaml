@@ -1,0 +1,4 @@
+hide_header_on:
+  type: list
+  list_type: simple
+  default: /t/*|/u/*
